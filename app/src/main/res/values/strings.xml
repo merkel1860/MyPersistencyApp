@@ -17,4 +17,7 @@
     <string name="edit_lname_hint">ENTER YOUR LASTNAME</string>
     <string name="dash_details">GO TO DASHBOARD</string>
     <string name="button_registration">REGISTER</string>
+    <string name="language">Language</string>
+    <string name="deutsch_item">DEUTSCH</string>
+    <string name="english_item">ENGLISCH</string>
 </resources>

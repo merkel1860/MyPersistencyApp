@@ -44,15 +44,20 @@ public class MainActivity extends FragmentActivity implements LoginFragment.List
     }
 
     private void nextFragment(User user, Fragment currentFragment) {
+        /*
+         *   Normally when an User is exited
+         * the user variable is empty meaning the session argument
+         * attached to fragment is blank.
+         * */
         if (user.fullname().length() > 0) {
-        PersonalInfoFragment personalInfoFragment = PersonalInfoFragment.
+            PersonalInfoFragment personalInfoFragment = PersonalInfoFragment.
                     newInstance(user);
             getSupportFragmentManager().
                     beginTransaction().
                     replace(R.id.fragment_container, personalInfoFragment).
                     commit();
         }
-        if(user.fullname().trim().isEmpty()){
+        if (user.fullname().trim().isEmpty()) {
             LoginFragment loginFragment = new LoginFragment();
             getSupportFragmentManager().
                     beginTransaction().

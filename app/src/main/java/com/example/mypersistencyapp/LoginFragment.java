@@ -8,14 +8,22 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.mypersistencyapp.model.User;
+import com.example.mypersistencyapp.model.utils.FilePersistence;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,7 +41,7 @@ public class LoginFragment extends Fragment {
 
     // Windget used by UI
     private AppCompatEditText firstnameText;
-    private AppCompatEditText lastnameText ;
+    private AppCompatEditText lastnameText;
     private AppCompatButton registerButton;
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -78,6 +86,8 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // activate menu option on menu bar
+        setHasOptionsMenu(true);
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.login_fragment, container, false);
     }
@@ -85,7 +95,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onAttach(@NonNull @NotNull Context context) {
         super.onAttach(context);
-        this.listener = (Listener)context;
+        this.listener = (Listener) context;
     }
 
     @Override
@@ -95,6 +105,15 @@ public class LoginFragment extends Fragment {
         setUpButtonListener();
     }
 
+    @Override
+    public void onCreateOptionsMenu (Menu menu,
+                                     MenuInflater inflater){
+        super.onCreateOptionsMenu(menu,inflater);
+        inflater.inflate(R.menu.menu_app, menu);
+
+    }
+
+
     private void setUpButtonListener() {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,9 +121,18 @@ public class LoginFragment extends Fragment {
                 User user = new User();
                 user.setFname(firstnameText.getText().toString());
                 user.setLname(lastnameText.getText().toString());
+                writeUserParamsFromFile(getContext(), user);
                 listener.checkRegistration(user);
             }
         });
+    }
+
+    private void writeUserParamsFromFile(Context context, User user) {
+        if(FilePersistence.writeToFile("userList",getContext(),user)){
+            Toast.makeText(context,"Successfully saved",Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(context,"Saving Process Failed",Toast.LENGTH_SHORT).show();
+        }
     }
 
 
