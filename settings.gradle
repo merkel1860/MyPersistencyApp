@@ -1,0 +1,2 @@
+rootProject.name = "MyPersistencyApp"
+include ':app'

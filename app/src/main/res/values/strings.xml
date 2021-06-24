@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyPersistencyApp</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="hello_blank_fragment">Welcome back</string>
+    <string name="fname">FIRSTNAME</string>
+    <string name="edit_fname_hint">ENTER YOUR FIRSTNAME</string>
+    <string name="lname">LASTNAME</string>
+    <string name="edit_lname_hint">ENTER YOUR LASTNAME</string>
+    <string name="dash_details">GO TO DASHBOARD</string>
+    <string name="button_registration">REGISTER</string>
+</resources>

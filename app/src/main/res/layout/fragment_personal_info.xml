@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalInfoFragment"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:id="@+id/fragment_personal_details">
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        >-->
+<!--        <TextView-->
+<!--            android:id="@+id/banner_text_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="@string/hello_blank_fragment"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/user_text_view"-->
+<!--            style="?android:listSeparatorTextViewStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:hint="User Fullname"-->
+<!--            />-->
+
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+</androidx.appcompat.widget.LinearLayoutCompat>
