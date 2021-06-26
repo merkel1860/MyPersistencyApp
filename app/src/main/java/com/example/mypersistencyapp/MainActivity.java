@@ -26,12 +26,6 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.Lis
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_app, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
     private void attachFragmentToActivity() {
         Fragment currentFragment = getSupportFragmentManager().
                 findFragmentById(R.id.fragment_container);

@@ -77,7 +77,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setHasOptionsMenu(true);
+        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -104,13 +104,12 @@ public class LoginFragment extends Fragment {
     }
 
 
-    /*@Override
+    @Override
     public void onCreateOptionsMenu (Menu menu,
                                      MenuInflater inflater){
         super.onCreateOptionsMenu(menu,inflater);
         inflater.inflate(R.menu.menu_app, menu);
     }
-*/
 
     private void setUpButtonListener() {
         registerButton.setOnClickListener(new View.OnClickListener() {

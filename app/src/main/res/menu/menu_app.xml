@@ -7,16 +7,7 @@
                 <item android:id="@+id/detusch_item"
                     android:title="@string/deutsch_item" />
                 <item android:id="@+id/englisch_item"
-                    android:title="@string/english_item" />
+                    android:title="@string/englisch_item" />
             </menu>
         </item>
-    <!--<item
-        android:id="@+id/action_settings"
-        android:title="@string/settings"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/action_done"
-        android:title="@string/done"
-        app:showAsAction="ifRoom|withText"/>-->
-
 </menu>

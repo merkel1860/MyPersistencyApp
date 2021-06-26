@@ -21,7 +21,7 @@
 <!--    AppBar Menu resources-->
     <string name="language">Language</string>
     <string name="deutsch_item">DEUTSCH</string>
-    <string name="english_item">ENGLISCH</string>
+    <string name="englisch_item">ENGLISCH</string>
     <string name="settings">Settings</string>
     <string name="done">Done</string>
 </resources>
