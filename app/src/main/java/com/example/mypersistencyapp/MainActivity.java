@@ -2,16 +2,20 @@ package com.example.mypersistencyapp;
 
 //import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import android.app.ActionBar;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.mypersistencyapp.model.User;
 
-public class MainActivity extends FragmentActivity implements LoginFragment.Listener {
+public class MainActivity extends AppCompatActivity implements LoginFragment.Listener {
 
 
     @Override
@@ -19,6 +23,13 @@ public class MainActivity extends FragmentActivity implements LoginFragment.List
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         attachFragmentToActivity();
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_app, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     private void attachFragmentToActivity() {

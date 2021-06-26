@@ -77,6 +77,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -86,9 +87,6 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // activate menu option on menu bar
-        setHasOptionsMenu(true);
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.login_fragment, container, false);
     }
 
@@ -105,14 +103,14 @@ public class LoginFragment extends Fragment {
         setUpButtonListener();
     }
 
-    @Override
+
+    /*@Override
     public void onCreateOptionsMenu (Menu menu,
                                      MenuInflater inflater){
         super.onCreateOptionsMenu(menu,inflater);
         inflater.inflate(R.menu.menu_app, menu);
-
     }
-
+*/
 
     private void setUpButtonListener() {
         registerButton.setOnClickListener(new View.OnClickListener() {
