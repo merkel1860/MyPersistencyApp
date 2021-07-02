@@ -125,7 +125,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void writeUserParamsFromFile(Context context, User user) {
-        if(FilePersistence.writeToFile("userList",getContext(),user)){
+        if(FilePersistence.writeToFile("userList.txt",getContext(),user)){
             Toast.makeText(context,"Successfully saved",Toast.LENGTH_SHORT).show();
         }else {
             Toast.makeText(context,"Saving Process Failed",Toast.LENGTH_SHORT).show();

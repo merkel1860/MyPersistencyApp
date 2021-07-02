@@ -16,9 +16,13 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.mypersistencyapp.model.User;
+import com.example.mypersistencyapp.model.utils.FilePersistence;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -71,6 +75,7 @@ public class PersonalInfoFragment extends Fragment {
         userTextViewId = UUID.randomUUID();
         previousBtnId = UUID.randomUUID();
         updateUIFragment();
+        FilePersistence.readFromFile("userList.txt",getContext(), new ArrayList<User>());
     }
 
     @Override
